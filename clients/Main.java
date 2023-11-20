@@ -30,6 +30,8 @@ import java.awt.*;
  * @author  Mike Smith University of Brighton
  * @version 2.0
  */
+//this is thomas clark's CW
+
 class Main
 {
   // Change to false to reduce the number of duplicated clients
