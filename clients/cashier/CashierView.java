@@ -69,7 +69,7 @@ public class CashierView implements Observer
 
     theBtBuy.setBounds( 16, 25+60*1, 80, 40 );      // Buy button 
     theBtBuy.addActionListener(                     // Call back code
-      e -> cont.doBuy() );
+      e ->  cont.doBuy() );
     cp.add( theBtBuy );                             //  Add to canvas
 
     theBtBought.setBounds( 16, 25+60*3, 80, 40 );   // Clear Button

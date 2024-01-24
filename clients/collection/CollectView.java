@@ -80,7 +80,6 @@ public class CollectView implements Observer
   {
     cont = c;
   }
-
   /**
    * Update the view
    * @param modelC   The observed model
@@ -98,3 +97,4 @@ public class CollectView implements Observer
   }
 
 }
+

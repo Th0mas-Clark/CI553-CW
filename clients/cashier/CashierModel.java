@@ -7,6 +7,8 @@ import middle.*;
 
 import java.util.Observable;
 
+import static clients.MusicPlayer.sound;
+
 /**
  * Implements the Model of the cashier client
  * @author  Mike Smith University of Brighton
@@ -113,6 +115,7 @@ public class CashierModel extends Observable
             theProduct.getQuantity() );         //
         if ( stockBought )                      // Stock bought
         {                                       // T
+          sound();                              //  Plays sound if stock is brought
           makeBasketIfReq();                    //  new Basket ?
           theBasket.add( theProduct );          //  Add to bought
           theAction = "Purchased " +            //    details
