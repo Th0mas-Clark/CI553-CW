@@ -1,4 +1,5 @@
 package clients;
+import clients.Advert.Adverts;
 import clients.backDoor.BackDoorController;
 import clients.backDoor.BackDoorModel;
 import clients.backDoor.BackDoorView;
@@ -43,7 +44,7 @@ class Main {
     new Main().begin();
     MusicPlayer musicPlayer = new MusicPlayer();
 
-    Application.launch(MusicPlayer.class,args); //launches background music
+    Application.launch(MusicPlayer.class, args); //launches background music
   }
 
   /**
@@ -65,6 +66,8 @@ class Main {
     if (many)
       startDisplayGUI_MVC(mlf);
     startCollectionGUI_MVC(mlf);
+    Adverts adverts = new Adverts();
+    adverts.main(new String[]{});
   }
 
   public void startCustomerGUI_MVC(MiddleFactory mlf) {
