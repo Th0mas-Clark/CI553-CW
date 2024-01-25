@@ -10,6 +10,8 @@ import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 
+import static clients.MusicPlayer.sound;
+
 
 /**
  * View of the model
@@ -31,6 +33,7 @@ public class CashierView implements Observer
   private final JButton     theBtCheck = new JButton( CHECK );
   private final JButton     theBtBuy   = new JButton( BUY );
   private final JButton     theBtBought= new JButton( BOUGHT );
+  private final JButton     theBtnRemove = new JButton( "Remove" );
 
   private StockReadWriter theStock     = null;
   private OrderProcessing theOrder     = null;
@@ -61,6 +64,11 @@ public class CashierView implements Observer
     rootWindow.setLocation( x, y );
 
     Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
+
+    theBtnRemove.setBounds( 16, 25+60*2, 80, 40 );    // Remove button
+    theBtnRemove.addActionListener(                   // Call back code
+            e -> cont.doRemove() );
+    cp.add( theBtnRemove );                           //  Add to canvas
 
     theBtCheck.setBounds( 16, 25+60*0, 80, 40 );    // Check Button
     theBtCheck.addActionListener(                   // Call back code
